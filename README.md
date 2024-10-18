@@ -7,7 +7,7 @@ Source camera identification aims to establish the correlation between images an
   
 ## Dataset Structure
 <p align='center'>  
-  <img src='https://github.com/JJL-a/HDRPlus/structure.png' width='870'/>
+  <img src='https://github.com/JJL-a/HDRPlus/blob/main/structure.png' width='870'/>
 </p>
 <p align='center'> 
 
