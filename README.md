@@ -15,6 +15,26 @@ Source camera identification aims to determine whether an image was captured by 
 ## Download 
 -https://pan.baidu.com/s/1lBK3E65PmovJQh6xaXDYwA
 - Extraction code:JJL6
+
+## Code and reproducibility
+The MATLAB implementations are available in [methods.zip](methods.zip).
+### Entry scripts
+
+| Method | Query evaluation script |
+| --- | --- |
+| PRNU | `PRNU/PRNU.m` |
+| PRNU_std | `PRNU_std` |
+| HDR-PRNU | `HDRPRNU/src/HDRPRNU.m` |
+| HDR-PRNU_std | `HDRPRNU_std/src/HDRPRNU.m` |
+
+### Running order
+
+1. Prepare the reference fingerprints using the fingerprint-extraction settings of the corresponding branch.
+2. Run the query evaluation script to obtain and save the PCE values, query-image filenames, and class labels.
+3. For adaptive evaluation, align the original and std branch outputs by query-image filename and select the larger PCE value for each image.
+4. Calculate AUC from the full ROC curve and calculate TPR and FPR at a PCE threshold of 60.
+
+All configurations must use the same predefined positive and negative query images for each target device. Each branch uses the reference fingerprint and query residual processed according to its own settings.
   
 ## Conclusions
 
